@@ -21,7 +21,7 @@ export function registrarCliente(
     request: RegistrarClienteRequestDto
 ): Promise<RegistrarClienteResponseDto>
 {
-    return apiFetch<RegistrarClienteResponseDto>("/auth/registrar", {
+    return apiFetch<RegistrarClienteResponseDto>("/auth/register", {
         method: "POST",
         body: JSON.stringify(request)
     });

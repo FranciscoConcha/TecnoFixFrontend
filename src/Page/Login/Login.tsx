@@ -4,8 +4,8 @@ import "./Login.css";
 
 interface loginProps {
     onLoginSuccess: (
-        Nombre: string,
-        Rol:String
+        nombre: string,
+        rol:string
     ) => void;
 }
 export function Login({onLoginSuccess}: loginProps) {
@@ -19,7 +19,7 @@ export function Login({onLoginSuccess}: loginProps) {
         setCargando(true);
         setError(null);
         try{
-            const response = await login({correo,password});
+            const response = await login({Correo: correo, Password: password});
             onLoginSuccess(response.name,response.rol);
         }catch(error){
             setError((error instanceof Error ? error.message : "Error desconocido"));

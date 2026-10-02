@@ -1,7 +1,7 @@
 // Intercade que corresponde al request del Backend del login
 export interface LoginRequestDto {
-  correo: string;
-  password: string;
+  Correo: string;
+  Password: string;
 }
 // Respuesta del Backend
 export interface LoginResponseDto {
