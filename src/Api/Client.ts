@@ -1,4 +1,4 @@
-import type {ApiErrorResponse} from "../Types/Auth.Type";
+import type {ApiErrorResponse} from "../Types/Auth.Type.ts";
 //Dirección base, debemos de tener en cuenta que está dirección es 
 //la del backend por lo tanto esto va a cambiar cuando desplegemos la app. 
 const API_BASE_URL = import.meta.env.VITE_API_URL as string;
