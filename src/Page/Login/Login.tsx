@@ -9,7 +9,7 @@ interface loginProps {
     ) => void;
 }
 export function Login({onLoginSuccess}: loginProps) {
-    const[correo,setCorreo] = useState("");
+    const [correo,setCorreo] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState<string | null>(null);
     const [cargando, setCargando] = useState(false);

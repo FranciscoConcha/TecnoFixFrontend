@@ -8,17 +8,20 @@ interface UserLogin{
   rol: string;
 }
 function App() {
+
   const [user, setUser] = useState<UserLogin | null>(null);
+
   const handleLoginSuccess = (
     name: string, 
     rol: string
   ) => {
     setUser({ name, rol });
   };
+
   function handleLogout() {
+
     setUser(null);
   }
-  
   return (
     <BrowserRouter>
       <nav style= {{padding: 12, borderBottom: "1px solid #ccc"}}>

@@ -28,3 +28,19 @@ export interface ApiErrorResponse {
   mensaje?: string;
   errors?: Record<string, string[]>;
 }
+
+//Interfaces de Tecnico
+export interface RegistrarTecnicoRequestDto {
+  name: string;
+  correo: string;
+  especialidad: string;
+}
+
+export interface RegistrarTecnicoResponseDto {
+  id: number;
+  name: string;
+  correo: string;
+  especialidad: string;
+  mensaje: string;
+  succes: boolean;
+}

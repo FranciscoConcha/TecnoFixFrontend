@@ -17,6 +17,7 @@ export function login(request: LoginRequestDto): Promise<LoginResponseDto>
     });
 }
 //Función que realiza la petición al backend para registrar un cliente
+
 export function registrarCliente(
     request: RegistrarClienteRequestDto
 ): Promise<RegistrarClienteResponseDto>
