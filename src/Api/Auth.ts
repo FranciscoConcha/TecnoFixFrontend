@@ -3,7 +3,9 @@ import type {
     LoginRequestDto, 
     LoginResponseDto, 
     RegistrarClienteRequestDto, 
-    RegistrarClienteResponseDto
+    RegistrarClienteResponseDto,
+    RegistrarTecnicoRequestDto,
+    RegistrarTecnicoResponseDto
 } from "../Types/Auth.Type.ts";
 //Función que realiza la petición al backend para registrar un cliente
 export function login(request: LoginRequestDto): Promise<LoginResponseDto>
@@ -26,4 +28,13 @@ export function registrarCliente(
         method: "POST",
         body: JSON.stringify(request)
     });
+}
+export function registrarTecnico(
+    request: RegistrarTecnicoRequestDto
+): Promise<RegistrarTecnicoResponseDto>
+{
+    return apiFetch<RegistrarTecnicoResponseDto>("/api/auth/RegistrarTecnico", {
+    method: "POST",
+    body: JSON.stringify(request),
+  });
 }
